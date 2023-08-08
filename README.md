@@ -1,38 +1,51 @@
-# Lead Quality Prediction Project
+# Lead Quality Prediction
 
-## Business Problem
+## Business Problem 
 
-This project aims to identify high potential leads for a company to improve sales effectiveness. Predicting lead quality helps prioritize sales efforts.
+This project aims to predict the quality of sales leads as high or low potential to help prioritize sales efforts. 
 
-## Data Overview
+## Data
 
-The dataset contains 7328 rows and 15 columns capturing information about leads like product, source, location etc. Target is lead status as high/low potential. 
+The data contains information about leads like product ID, source, location, sales agent etc. The target variable is the lead status categorized as high potential or low potential.
 
-## Project Goal
-
-Build a classification model to predict if a lead is high or low quality. Compare performance of different ML algorithms.
+The data has 7328 rows and 15 columns.
 
 ## Methods Used
 
-- Exploratory Data Analysis 
-- Data Preprocessing (encoding, handling null values)
-- Balancing classes using SMOTE sampling
-- Modeling with Logistic Regression, SVM, Random Forest, XGBoost etc
-- Hyperparameter Tuning to optimize models
-- Evaluate models on accuracy, AUC ROC, F1 score
+- Exploratory Data Analysis
+- Data Preprocessing
+  - Handling missing values
+  - Encoding categorical variables 
+- Sampling using SMOTE to balance class distribution
+- Modeling
+  - Logistic Regression
+  - Decision Tree
+  - Random Forest
+  - SVM
+  - Neural Network
+  - Naive Bayes
+  - KNN
+  - XGBoost
+- Hyperparameter Tuning
+- Model Evaluation and Selection
 
-## Key Results
+## Tech Stack
 
-- Random Forest performs best with 77% accuracy and 0.77 F1 score
-- XGBoost comes second with 75% accuracy
-- Significant lift over a baseline model
+- Python
+- Pandas, Numpy
+- Matplotlib, Seaborn
+- Scikit-learn
+- Jupyter Notebook
 
 ## Conclusion
 
-Random Forest works well for lead quality prediction. This project provides a template for using ML to improve sales conversions.
+Several models were trained and evaluated. Random Forest performed the best with 77% accuracy and 0.77 ROC AUC. XGBoost was second best with 75% accuracy. The top models significantly improved lead prioritization compared to a basic model.
 
 ## Future Work
 
-- Try neural network models like LSTM 
-- Add model explanations using SHAP values
+Some ways to improve the model:
+
+- Try deep learning models like LSTM for sequence data
+- Use larger dataset to improve performance 
+- Add model explanability using SHAP values
 - Deploy model to web application
